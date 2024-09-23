@@ -9,5 +9,6 @@ router.get('/signUp' , signUp.signUpform);
 router.post('/signUpCon' , signUp.signUpController);
 router.get('/login' , logIn.logIn);
 router.post('/logInController' , logIn.logInController);
+router.get('/profile',controller.profileController)
 
 module.exports = router;
