@@ -1,4 +1,4 @@
-const signUpModel = require('../model/sinUpmodel');
+const signUpModel = require('../models/singUp/signUpmodel');
 const bcrypt = require('bcrypt');
 const saltRounds = 10;
 

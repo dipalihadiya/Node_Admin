@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Modernize Free</title>
+  <link rel="shortcut icon" type="image/png" href="../src/assets/images/logos/favicon.png" />
+  <link rel="stylesheet" href="../src/assets/css/styles.min.css" />
+</head>
+
+<body>
+  <!--  Body Wrapper -->
+  <div class="page-wrapper" id="main-wrapper" data-layout="vertical" data-navbarbg="skin6" data-sidebartype="full"
+    data-sidebar-position="fixed" data-header-position="fixed">
+    <div
+      class="position-relative overflow-hidden radial-gradient min-vh-100 d-flex align-items-center justify-content-center">
+      <div class="d-flex align-items-center justify-content-center w-100">
+        <div class="row justify-content-center w-100">
+          <div class="col-md-8 col-lg-6 col-xxl-3">
+            <div class="card mb-0">
+              <div class="card-body">
+                <a href="./index.html" class="text-nowrap logo-img text-center d-block py-3 w-100">
+                  <img src="../src/assets/images/logos/dark-logo.svg" width="180" alt="">
+                </a>
+                <p class="text-center">Your Social Campaigns</p>
+                <form action="/updateBlog/<%= blog._id %>" method="post" enctype="multipart/form-data">
+                  <div class="mb-1">
+                    <label for="title" class="form-label">Title:</label><br>
+                    <input type="text" id="title" placeholder="Enter title"  value="<%= blog.title %>" autofocus  class="form-control"name="title"><br><br>
+                  </div>
+                  <div class="mb-1">
+                    <label for="content" class="form-label">Content:</label><br>
+                    <textarea id="content" class="form-control" name="content" placeholder="Enter content"  name="content" rows="1" cols="3" required autofocus><%= blog.content %> ></textarea><br><br>
+                  </div>
+                  <div class="mb-1">
+                    
+                    <input type="file" class="form-control"  id="blog_img" name="blog_img" autofocus><br><br>
+                  </div>
+                    <button type="submit" class="btn btn-primary"> Edit Blog</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="src/assets/libs/jquery/dist/jquery.min.js"></script>
+  <script src="src/assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
